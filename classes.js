@@ -19,16 +19,37 @@ console.log(myPerson.name);
 class Person extends Master
 
 
-// Example
+//// Example
 class Person {
   constructor() {
     this.name = 'Clif'
   }
-
   printMyName() {
     console.log(this.name)
   }
 }
-
 const person = new Person()
 person.printMyName()
+
+
+//// Example using protoypes or inheritance
+class Human {
+  construtor() {
+    this.legs = 2
+  }
+  printLegs() {
+    console.log(this.legs)
+  }
+}
+class Person extends Human {
+  super()// keyword will execute the inherited class
+  constructor() {
+    this.name = 'Clif'
+  }
+  printMyName() {
+    console.log(this.name)
+  }
+}
+const person = new Person()
+person.printMyName()
+person.printLegs()
